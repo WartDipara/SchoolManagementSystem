@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DE4BECB-4229-42F9-8DB0-343A311607D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SchoolManagementSystem</RootNamespace>
+    <AssemblyName>SchoolManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x32|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\x32\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addMsg.cs" />
+    <Compile Include="addStudentData.cs" />
+    <Compile Include="AddstudentForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddstudentForm.Designer.cs">
+      <DependentUpon>AddstudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTeacherData.cs" />
+    <Compile Include="AddTeacherForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddTeacherForm.Designer.cs">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gradientBg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForm.Designer.cs">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schoolintroForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="schoolintroForm.Designer.cs">
+      <DependentUpon>schoolintroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLoginForm.Designer.cs">
+      <DependentUpon>StudentLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stuMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stuMainForm.Designer.cs">
+      <DependentUpon>stuMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stuRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stuRegForm.Designer.cs">
+      <DependentUpon>stuRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacherLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacherLoginForm.Designer.cs">
+      <DependentUpon>teacherLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="msgDashboardForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="msgDashboardForm.Designer.cs">
+      <DependentUpon>msgDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teaMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teaMainForm.Designer.cs">
+      <DependentUpon>teaMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teaRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teaRegForm.Designer.cs">
+      <DependentUpon>teaRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teaSearchForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="teaSearchForm.Designer.cs">
+      <DependentUpon>teaSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userInfo.cs" />
+    <EmbeddedResource Include="AddstudentForm.resx">
+      <DependentUpon>AddstudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacherForm.resx">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegForm.resx">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="schoolintroForm.resx">
+      <DependentUpon>schoolintroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLoginForm.resx">
+      <DependentUpon>StudentLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stuMainForm.resx">
+      <DependentUpon>stuMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stuRegForm.resx">
+      <DependentUpon>stuRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacherLoginForm.resx">
+      <DependentUpon>teacherLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msgDashboardForm.resx">
+      <DependentUpon>msgDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teaMainForm.resx">
+      <DependentUpon>teaMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teaRegForm.resx">
+      <DependentUpon>teaRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teaSearchForm.resx">
+      <DependentUpon>teaSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SchoolDBDataSet.xsc">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet.xss">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\icons8_dashboard_35px_1.png" />
+    <Content Include="Assets\icons8_dashboard_50px_2.png" />
+    <Content Include="Assets\icons8_logout_rounded_up_filled_35px.png" />
+    <Content Include="Assets\icons8_School_80px_1.png" />
+    <Content Include="Assets\icons8_students_filled_60px.png" />
+    <Content Include="Assets\icons8_student_35px.png" />
+    <Content Include="Assets\icons8_student_registration_filled_60px.png" />
+    <Content Include="Assets\icons8_training_35px.png" />
+    <Content Include="Assets\icons8_training_filled_60px.png" />
+    <Content Include="SchoolDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SchoolDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SchoolDB.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\icons8_training_filled_60px.png" />
+    <None Include="Resources\icons8_training_35px.png" />
+    <None Include="Resources\icons8_students_filled_60px.png" />
+    <None Include="Resources\icons8_student_registration_filled_60px.png" />
+    <None Include="Resources\icons8_student_35px.png" />
+    <None Include="Resources\icons8_logout_rounded_up_filled_35px.png" />
+    <None Include="Resources\icons8_dashboard_50px_2.png" />
+    <None Include="Resources\icons8_dashboard_35px_1.png" />
+    <None Include="Resources\icons8_School_80px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Student_field\" />
+    <Folder Include="Teacher_field\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
